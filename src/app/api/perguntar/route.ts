@@ -2,14 +2,14 @@ import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
   try {
-    const { pergunta } = await request.json(); // Pega a pergunta do body
+    const { pergunta } = await request.json();
 
-    const backendUrl = "http://localhost:4000/api/all"; // Chamando o backend
+    const backendUrl = "https://desafio-2-0.koyeb.app/";
 
     const response = await fetch(backendUrl, {
       method: "POST",
-      headers: { "Content-Type": "application/json" }, // Envia JSON corretamente
-      body: JSON.stringify({ question: pergunta }), // Enviando no formato certo
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ question: pergunta }),
     });
 
     const data = await response.json();

@@ -101,7 +101,7 @@ export default function Home() {
     setMediaFinal([]);
 
     try {
-      const response = await fetch("http://localhost:4000/api/all", {
+      const response = await fetch("https://desafio-2-0.koyeb.app/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: pergunta }), // Enviando a pergunta corretamente
